@@ -1,3 +1,0 @@
-import script
-start "" mongod --dbpath ./data/db
-start "" mongorestore --db AdsDB ./AdsDB
