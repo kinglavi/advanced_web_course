@@ -4,35 +4,18 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 
 import { CatService } from '../services/cat.service';
 import { ToastComponent } from '../shared/toast/toast.component';
-import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 @Component({
   selector: 'app-cats',
-  templateUrl: './cats.component.html',
-  styleUrls: ['./cats.component.scss']
+  templateUrl: './ads.component.html',
+  styleUrls: ['./ads.component.scss']
 })
-export class CatsComponent implements OnInit {
+export class AdsComponent implements OnInit {
 
   cat = {};
   cats = [];
   isLoading = true;
   isEditing = false;
-  settings = {
-    columns: {
-      id: {
-        title: 'ID'
-      },
-      name: {
-        title: 'Full Name'
-      },
-      username: {
-        title: 'User Name'
-      },
-      email: {
-        title: 'Email'
-      }
-    }
-  };
 
   addCatForm: FormGroup;
   name = new FormControl('', Validators.required);
@@ -82,7 +65,7 @@ export class CatsComponent implements OnInit {
     this.isEditing = false;
     this.cat = {};
     this.toast.setMessage('item editing cancelled.', 'warning');
-    // reload the cats to reset the editing
+    // reload the ads to reset the editing
     this.getCats();
   }
 
