@@ -59,8 +59,8 @@
       <div class="form-group">
           <input class="form-control" type="text" name="name" formControlName="name" placeholder="Name">
       </div>
-      <div class="form-group">
-        <input class="form-control" type="number" name="age" formControlName="age" placeholder="Age" min="0">
+      <div class="form-group" [formGroup]="myGroup">
+        <ss-multiselect-dropdown [options]="myOptions" [(ngModel)]="optionsModel" [ngModelOptions]="{standalone: true}" (ngModelChange)="onChange($event)"></ss-multiselect-dropdown>
       </div>
       <div class="form-group">
         <input class="form-control" type="number" name="weight" formControlName="weight" placeholder="Weight" step="any" min="0">

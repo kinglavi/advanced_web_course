@@ -1,11 +1,26 @@
 import * as mongoose from 'mongoose';
 
-const catSchema = new mongoose.Schema({
+const adSchema = new mongoose.Schema({
   name: String,
   weight: Number,
-  age: Number
+  age: Number,
+  screenIds: [Number],
+  images: [String],
+  template: String,
+  duration: Number,
+  timing: {
+    startDate: Date,
+    endDate: Date,
+    daySchedule: [
+      {
+        from: { dayTimeInSeconds: Number},
+        to: { dayTimeInSeconds: Number},
+        days: [Number]
+      }
+    ]
+  },
 });
 
-const Cat = mongoose.model('Cat', catSchema);
+const Ad = mongoose.model('Ad', adSchema);
 
-export default Cat;
+export default Ad;

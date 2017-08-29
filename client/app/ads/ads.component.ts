@@ -4,6 +4,7 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 
 import { AdService } from '../services/ad.service';
 import { ToastComponent } from '../shared/toast/toast.component';
+import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
 
 @Component({
   selector: 'app-ads',
@@ -16,11 +17,17 @@ export class AdsComponent implements OnInit {
   ads = [];
   isLoading = true;
   isEditing = false;
+  optionsModel: number[];
+  myOptions: IMultiSelectOption[];
+  screenIds = [];
 
   addAdForm: FormGroup;
   name = new FormControl('', Validators.required);
   age = new FormControl('', Validators.required);
   weight = new FormControl('', Validators.required);
+  myGroup= new FormGroup({
+  firstName: new FormControl()
+});
 
   constructor(private adService: AdService,
               private formBuilder: FormBuilder,
@@ -28,12 +35,22 @@ export class AdsComponent implements OnInit {
               public toast: ToastComponent) { }
 
   ngOnInit() {
+    this.myOptions = [
+      { id: 1, name: 'Screen 1' },
+      { id: 2, name: 'Screen 2' },
+    ];
+
     this.getAds();
     this.addAdForm = this.formBuilder.group({
       name: this.name,
       age: this.age,
-      weight: this.weight
+      weight: this.weight,
     });
+  }
+
+  onChange() {
+    console.log(this.optionsModel);
+    this.screenIds = this.optionsModel;
   }
 
   getAds() {
