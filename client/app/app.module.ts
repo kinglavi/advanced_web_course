@@ -2,7 +2,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { RoutingModule } from './routing.module';
 import { SharedModule } from './shared/shared.module';
-import { CatService } from './services/cat.service';
+import { AdService } from './services/ad.service';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
 import { AuthGuardLogin } from './services/auth-guard-login.service';
@@ -16,8 +16,8 @@ import { LogoutComponent } from './logout/logout.component';
 import { AccountComponent } from './account/account.component';
 import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import {Ng2SmartTableModule} from 'ng2-smart-table';
-// import {Ng2SmartTableModule} from 'ng2-smart-table';
+
+
 
 @NgModule({
   declarations: [
@@ -39,7 +39,7 @@ import {Ng2SmartTableModule} from 'ng2-smart-table';
     AuthService,
     AuthGuardLogin,
     AuthGuardAdmin,
-    CatService,
+    AdService,
     UserService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

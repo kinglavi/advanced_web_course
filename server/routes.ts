@@ -15,10 +15,10 @@ export default function setRoutes(app) {
   // Cats
   router.route('/ads').get(catCtrl.getAll);
   router.route('/ads/count').get(catCtrl.count);
-  router.route('/cat').post(catCtrl.insert);
-  router.route('/cat/:id').get(catCtrl.get);
-  router.route('/cat/:id').put(catCtrl.update);
-  router.route('/cat/:id').delete(catCtrl.delete);
+  router.route('/ad').post(catCtrl.insert);
+  router.route('/ad/:id').get(catCtrl.get);
+  router.route('/ad/:id').put(catCtrl.update);
+  router.route('/ad/:id').delete(catCtrl.delete);
 
   // Users
   router.route('/login').post(userCtrl.login);
