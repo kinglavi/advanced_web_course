@@ -1,175 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92f1b63f-692e-49d5-9bef-eacb10d4f146" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.atom-build.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.babelrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitattributes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.github/CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.github/PULL_REQUEST_TEMPLATE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/recipe.model.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/todo.model.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/user.model.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/routes.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/routes/_authentication.router.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/routes/_recipe.router.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/routes/_todo.router.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/env.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/gulpfile.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/helpers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/karma.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/mongoose.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/passport.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/protractor.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/spec-bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/ts-rules/importDestructuringSpacingRule.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/ts-rules/importDestructuringSpacingRule.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/webpack.common.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/webpack.dev.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/webpack.prod.config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/webpack.test.config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mongodb/Ads.bson" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mongodb/Ads.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mongodb/Screens.bson" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mongodb/Screens.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mongodb/import.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mongodb/messages.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sockets/base.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/about/about.component.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/about/about.spec.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/about/index.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/app.component.e2e.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/app.component.spec.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/app.component.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/app.service.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/app.store.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/directives/x-large/index.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/directives/x-large/x-large.directive.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/directives/x-large/x-large.spec.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/home.component.e2e.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/home.component.spec.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/home.component.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/home.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/home.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/index.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/services/title/index.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/services/title/title.service.spec.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/services/title/title.service.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/index.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/recipes/rating.component.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/recipes/rating.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/recipes/recipe-details.component.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/recipes/recipe-details.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/recipes/recipe-list.component.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/recipes/recipe-list.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/recipes/recipe.service.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/recipes/recipe.store.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/recipes/recipes.component.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/recipes/recipes.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/recipes/recipes.reducer.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/recipes/recipes.spec.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/recipes/selected-recipe.reducer.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/shared/components/accordion/accordion-group.component.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/shared/components/accordion/accordion-group.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/shared/components/accordion/accordion.component.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/shared/directives/router-active/index.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/shared/directives/router-active/router-active.directive.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/todo/ad.component.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/todo/ad.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/todo/ad.service.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/css/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/data.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/humans.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/android-icon-144x144.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/android-icon-192x192.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/android-icon-36x36.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/android-icon-48x48.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/android-icon-72x72.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/android-icon-96x96.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/apple-icon-114x114.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/apple-icon-120x120.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/apple-icon-144x144.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/apple-icon-152x152.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/apple-icon-180x180.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/apple-icon-57x57.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/apple-icon-60x60.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/apple-icon-72x72.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/apple-icon-76x76.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/apple-icon-precomposed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/apple-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/browserconfig.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/favicon-16x16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/favicon-32x32.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/favicon-96x96.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/manifest.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/ms-icon-144x144.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/ms-icon-150x150.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/ms-icon-310x310.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/icon/ms-icon-70x70.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/img/angular-logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/manifest.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/robots.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/service-worker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/custom-typings.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main.browser.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/platform/browser/angular2-material2/index.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/platform/browser/directives.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/platform/browser/index.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/platform/browser/pipes.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/platform/browser/providers.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/platform/environment.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/polyfills.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/_shame.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/abstracts/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/abstracts/_functions.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/abstracts/_mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/abstracts/_variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/base/README.MD" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/base/_base.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/base/_fonts.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/base/_helpers.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/base/_typography.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/components/README.MD" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/components/_button.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/layout/README.MD" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/layout/_footer.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/layout/_header.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/main.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/pages/README.MD" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/pages/_home.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/themes/README.MD" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/themes/_default.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/vendor/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sass/vendor/_normalize.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/vendor.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/mocha.opts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/recipe.model.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/todo.model.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/utils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/typedoc.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/typings.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vulgar.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.editorconfig" afterPath="$PROJECT_DIR$/.editorconfig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/karma.conf.js" afterPath="$PROJECT_DIR$/karma.conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protractor.conf.js" afterPath="$PROJECT_DIR$/protractor.conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tsconfig.json" afterPath="$PROJECT_DIR$/tsconfig.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tslint.json" afterPath="$PROJECT_DIR$/tslint.json" />
-    </list>
+    <list default="true" id="92f1b63f-692e-49d5-9bef-eacb10d4f146" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -222,8 +54,8 @@
       <file leaf-file-name="cats.component.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/cats/cats.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="71" column="6" lean-forward="true" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
+            <state relative-caret-position="92">
+              <caret line="64" column="30" lean-forward="true" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -405,16 +237,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1504036678418</updated>
-      <workItem from="1504036679548" duration="1604000" />
+      <workItem from="1504036679548" duration="1633000" />
     </task>
+    <task id="LOCAL-00001" summary="changed starter">
+      <created>1504038301935</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1504038301935</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1604000" />
+    <option name="totallyTimeSpent" value="1633000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1032" y="-8" width="1040" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -424,7 +263,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -441,6 +280,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="changed starter" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed starter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -525,8 +368,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/cats/cats.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="71" column="6" lean-forward="true" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
+        <state relative-caret-position="92">
+          <caret line="64" column="30" lean-forward="true" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
           <folding />
         </state>
       </provider>
