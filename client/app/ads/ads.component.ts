@@ -4,7 +4,10 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 
 import { AdService } from '../services/ad.service';
 import { ToastComponent } from '../shared/toast/toast.component';
-import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
+import {IMultiSelectOption, IMultiSelectSettings, IMultiSelectTexts} from 'angular-2-dropdown-multiselect';
+import {IMyDateModel, IMyDpOptions, IMySelector} from 'mydatepicker';
+import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-ads',
@@ -12,14 +15,41 @@ import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
   styleUrls: ['./ads.component.scss']
 })
 export class AdsComponent implements OnInit {
-
+  startDatePlaceHolder = 'Start date';
+  endDatePlaceHolder = 'End date';
+  datePickerOptions: IMyDpOptions = {
+    // other options...
+    todayBtnTxt: 'Today',
+    dateFormat: 'yyyy-mm-dd',
+    firstDayOfWeek: 'su',
+    satHighlight: true,
+    // allowDeselectDate: true,
+    // inline: true
+  };
+  // model: Object = { date: { year: 2018, month: 10, day: 9 } };
+  selector: IMySelector = {
+    open: false
+  };
+  startDate: Object = '';
+  endDate: Object;
   ad = {};
   ads = [];
+  startTime;
   isLoading = true;
   isEditing = false;
-  optionsModel: number[];
-  myOptions: IMultiSelectOption[];
+  screenOption: number[];
+  imageOption: number[];
+  templateOption: number[];
+  dayOption: number[];
+  imageOptions: IMultiSelectOption[];
+  screenOptions: IMultiSelectOption[];
+  templateOptions: IMultiSelectOption[];
+  dayOptions: IMultiSelectOption[];
+
   screenIds = [];
+  imageIds: number[];
+  days = [];
+  templateIds = [];
 
   addAdForm: FormGroup;
   name = new FormControl('', Validators.required);
@@ -28,6 +58,24 @@ export class AdsComponent implements OnInit {
   myGroup= new FormGroup({
     firstName: new FormControl()
   });
+  // Settings configuration
+  dropDownSettings: IMultiSelectSettings = {
+    // enableSearch: true,
+    // checkedStyle: 'fontawesome',
+    // buttonClasses: 'btn btn-default btn-block',
+    // dynamicTitleMaxItems: 3,
+    // displayAllSelectedText: true
+  };
+  // Text configuration
+  dropDownListText: IMultiSelectTexts = {
+    checkAll: 'Select all',
+    uncheckAll: 'Unselect all',
+    checked: 'item selected',
+    checkedPlural: 'items selected',
+    searchPlaceholder: 'Find',
+    defaultTitle: 'Select',
+    allSelected: 'All selected',
+  };
 
   constructor(private adService: AdService,
               private formBuilder: FormBuilder,
@@ -35,9 +83,27 @@ export class AdsComponent implements OnInit {
               public toast: ToastComponent) { }
 
   ngOnInit() {
-    this.myOptions = [
+    this.screenOptions = [
       { id: 1, name: 'Screen 1' },
       { id: 2, name: 'Screen 2' },
+    ];
+    this.imageOptions = [
+      { id: 1, name: 'Cat image' },
+      { id: 2, name: 'Dog image' },
+    ];
+    this.templateOptions = [
+      { id: 1, name: 'Template 1' },
+      { id: 2, name: 'Template 2' },
+    ];
+
+    this.dayOptions = [
+      { id: 1, name: 'Sunday' },
+      { id: 2, name: 'Monday' },
+      { id: 3, name: 'Tuesday' },
+      { id: 4, name: 'Wednesday' },
+      { id: 5, name: 'Thursday' },
+      { id: 6, name: 'Friday' },
+      { id: 7, name: 'Saturday' }
     ];
 
     this.getAds();
@@ -48,9 +114,35 @@ export class AdsComponent implements OnInit {
     });
   }
 
-  onChange() {
-    console.log(this.optionsModel);
-    this.screenIds = this.optionsModel;
+  changeStartTime(val) {
+
+  }
+
+  onDateChanged(event: IMyDateModel) {
+    this.closeSelector();
+  }
+
+  closeSelector() {
+    this.selector = {
+      open: false
+    };
+  }
+
+  onChangeScreen() {
+    console.log(this.screenOption);
+    this.screenIds = this.screenOption;
+  }
+
+  onChangeImage() {
+    this.imageIds = this.imageOption;
+  }
+
+  onChangeTemplate() {
+    this.templateIds = this.templateOption;
+  }
+
+  onChangeDay() {
+    this.days = this.imageOption;
   }
 
   getAds() {

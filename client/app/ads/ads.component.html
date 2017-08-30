@@ -56,24 +56,104 @@
   <h4 class="card-header">Add new advertisement</h4>
   <div class="card-block">
     <form class="form-inline" [formGroup]="addAdForm" (ngSubmit)="addAd()" style="text-align:center">
-      <div class="form-group">
-        <input class="form-control" type="text" name="name" formControlName="name" placeholder="Name">
-      </div>
-      <div class="form-group" [formGroup]="myGroup">
-        <ss-multiselect-dropdown [options]="myOptions" [(ngModel)]="optionsModel" [ngModelOptions]="{standalone: true}" (ngModelChange)="onChange($event)"></ss-multiselect-dropdown>
-      </div>
-      <div class="form-group">
-        <input class="form-control" type="number" name="weight" formControlName="weight" placeholder="Weight" step="any" min="0">
-      </div>
-      <div class="form-group">
-        <input class="form-control" type="number" name="weight" formControlName="weight" placeholder="Weight" step="any" min="0">
-      </div>
-      <div class="form-group">
-        <input class="form-control" type="number" name="weight" formControlName="weight" placeholder="Weight" step="any" min="0">
-      </div>
-      <div class="form-group">
-        <input class="form-control" type="number" name="weight" formControlName="weight" placeholder="Weight" step="any" min="0">
-      </div>
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>
+          <div class="form-inline">
+            Name: <input class="form-control" type="text" name="name" formControlName="name" placeholder="Name">
+          </div>
+        </th>
+        <th>
+          <div class="form-inline">
+            Text: <input class="form-control" type="text" name="text" formControlName="text" placeholder="Text" step="any" >
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <div class="form-inline" [formGroup]="myGroup">
+            Screen: <ss-multiselect-dropdown [options]="screenOptions"
+                                     [(ngModel)]="screenOption"
+                                     [ngModelOptions]="{standalone: true}"
+                                     (ngModelChange)="onChangeScreen($event)"
+            ></ss-multiselect-dropdown>
+          </div>
+        </th>
+        <th>
+          <div class="form-inline" [formGroup]="myGroup">
+            Images: <ss-multiselect-dropdown [options]="imageOptions"
+                                     [(ngModel)]="imageOption"
+                                     [ngModelOptions]="{standalone: true}"
+                                     (ngModelChange)="onChangeImage($event)"
+            ></ss-multiselect-dropdown>
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <div class="form-inline" [formGroup]="myGroup">
+            Templates: <ss-multiselect-dropdown [options]="templateOptions"
+                                     [(ngModel)]="templateOption"
+                                     [ngModelOptions]="{standalone: true}"
+                                     (ngModelChange)="onChangeTemplate($event)"
+            ></ss-multiselect-dropdown>
+          </div>
+        </th>
+        <th>
+          <div class="form-inline">
+            Duration: <input class="form-control" type="number" name="ttl"
+                   formControlName="ttl" placeholder="Duration in min"
+                   step="any" min="1" max="60">
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <div class="form-inline">
+            <form #myForm="ngForm" novalidate class="form-inline">
+              <my-date-picker name="mydate" class="datePicker"
+                                          [options]="datePickerOptions"
+                                          [placeholder]="startDatePlaceHolder"
+                                          [(ngModel)]="startDate"
+                                          [selector]="selector"
+                                          (dateChanged)="onDateChanged($event)"
+            ></my-date-picker>
+            </form>
+          </div>
+        </th>
+        <th>
+          <div class="form-inline">
+            <form #myForm="ngForm" novalidate class="form-inline">
+              <my-date-picker name="mydate" class="datePicker"
+                              [options]="datePickerOptions"
+                              [placeholder]="endDatePlaceHolder"
+                              [(ngModel)]="endDate"
+                              [selector]="selector"
+                              (dateChanged)="onDateChanged($event)"
+              ></my-date-picker>
+            </form>
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <div class="form-inline" [formGroup]="myGroup">
+            Days: <ss-multiselect-dropdown [options]="dayOptions"
+                                                [(ngModel)]="dayOption"
+                                                [ngModelOptions]="{standalone: true}"
+                                                (ngModelChange)="onChangeDay($event)"
+          ></ss-multiselect-dropdown>
+          </div>
+        </th>
+        <th>
+          <datetime [datepicker]="false" [(ngModel)]="startDate"></datetime>
+        </th>
+      </tr>
+      </thead>
+    </table>
+
+
       <button class="btn btn-primary" type="submit" [disabled]="!addAdForm.valid"><i class="fa fa-floppy-o"></i> Add</button>
     </form>
   </div>

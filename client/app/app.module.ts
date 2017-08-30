@@ -24,9 +24,12 @@ import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ChartsComponent } from './charts/charts.component';
 import { FeedComponent } from './feed/feed.component';
+import { MyDatePickerModule } from 'mydatepicker';
 
 import {MultiselectDropdownModule} from 'angular-2-dropdown-multiselect';
-// import {Ng2SmartTableModule} from 'ng2-smart-table';
+import { BrowserModule } from '@angular/platform-browser';
+import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
+
 
 @NgModule({
   declarations: [
@@ -49,7 +52,10 @@ import {MultiselectDropdownModule} from 'angular-2-dropdown-multiselect';
   imports: [
     RoutingModule,
     SharedModule,
-    MultiselectDropdownModule
+    MultiselectDropdownModule,
+    BrowserModule,
+    MyDatePickerModule,
+    NKDatetimeModule
   ],
   providers: [
     AuthService,
