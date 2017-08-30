@@ -11,8 +11,8 @@ const adSchema = new mongoose.Schema({
     startDate: Date,
     endDate: Date,
     days: [Number],
-    startTime:String,
-    endTime:String
+    startTime: String,
+    endTime: String
   },
 });
 
