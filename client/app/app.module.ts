@@ -2,7 +2,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { RoutingModule } from './routing.module';
 import { SharedModule } from './shared/shared.module';
-import { CatService } from './services/cat.service';
+import { AdService } from './services/ad.service';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
 import { ChartsService } from './services/charts.service';
@@ -54,7 +54,7 @@ import {Ng2SmartTableModule} from 'ng2-smart-table';
     AuthService,
     AuthGuardLogin,
     AuthGuardAdmin,
-    CatService,
+    AdService,
     UserService,
     ChartsService
   ],

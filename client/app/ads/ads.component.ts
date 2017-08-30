@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
-import { CatService } from '../services/cat.service';
+import { AdService } from '../services/ad.service';
 import { ToastComponent } from '../shared/toast/toast.component';
 
 @Component({
@@ -22,7 +22,7 @@ export class AdsComponent implements OnInit {
   age = new FormControl('', Validators.required);
   weight = new FormControl('', Validators.required);
 
-  constructor(private catService: CatService,
+  constructor(private AdService: AdService,
               private formBuilder: FormBuilder,
               private http: Http,
               public toast: ToastComponent) { }
@@ -37,7 +37,7 @@ export class AdsComponent implements OnInit {
   }
 
   getCats() {
-    this.catService.getCats().subscribe(
+    this.AdService.getCats().subscribe(
       data => this.cats = data,
       error => console.log(error),
       () => this.isLoading = false
@@ -45,7 +45,7 @@ export class AdsComponent implements OnInit {
   }
 
   addCat() {
-    this.catService.addCat(this.addCatForm.value).subscribe(
+    this.AdService.addCat(this.addCatForm.value).subscribe(
       res => {
         const newCat = res.json();
         this.cats.push(newCat);
@@ -70,7 +70,7 @@ export class AdsComponent implements OnInit {
   }
 
   editCat(cat) {
-    this.catService.editCat(cat).subscribe(
+    this.AdService.editCat(cat).subscribe(
       res => {
         this.isEditing = false;
         this.cat = cat;
@@ -82,7 +82,7 @@ export class AdsComponent implements OnInit {
 
   deleteCat(cat) {
     if (window.confirm('Are you sure you want to permanently delete this item?')) {
-      this.catService.deleteCat(cat).subscribe(
+      this.AdService.deleteCat(cat).subscribe(
         res => {
           const pos = this.cats.map(elem => elem._id).indexOf(cat._id);
           this.cats.splice(pos, 1);
