@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Angular-Full-Stack.iml" filepath="$PROJECT_DIR$/.idea/Angular-Full-Stack.iml" />
+      <module fileurl="file://C:\wamp64\www\advanced_web_course-master\.idea\Angular-Full-Stack.iml" filepath="C:\wamp64\www\advanced_web_course-master\.idea\Angular-Full-Stack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/advanced_web_course-master.iml" filepath="$PROJECT_DIR$/.idea/advanced_web_course-master.iml" />
     </modules>
   </component>
 </project>

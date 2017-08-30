@@ -1,0 +1,22 @@
+<div class="col-md-12 bg-primary" id="charts-container">
+    <div class="col-md-12" id="charts">
+        <div class="col-md-12 title">
+            ADVERTISMENTS STASTISTICS
+        </div>
+        <div class="col-md-5" id="pie-container">
+            <app-loading [condition]="pieChart.isLoading"></app-loading>
+        </div>
+        <div class="col-md-7" id="histogram">
+            <app-loading [condition]="histogram.isLoading"></app-loading>
+        </div>
+        <div class="col-md-12">
+            Avg. show time per advertisment: {{avgShowTime}}
+        </div>
+    </div>
+
+    <div class="col-md-10 offset-md-1">
+        <feed [url]="'https://news.google.com/rss/headlines/section/topic/WORLD?ned=us&hl=en'"></feed>
+    </div>
+
+</div>
+

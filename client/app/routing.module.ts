@@ -10,13 +10,16 @@ import { LogoutComponent } from './logout/logout.component';
 import { AccountComponent } from './account/account.component';
 import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ChartsComponent } from './charts/charts.component';
 
 import { AuthGuardLogin } from './services/auth-guard-login.service';
 import { AuthGuardAdmin } from './services/auth-guard-admin.service';
 
+
 const routes: Routes = [
   { path: '', component: AboutComponent },
-  { path: 'ads', component: AdsComponent },
+  { path: 'cats', component: AdsComponent },
+  { path: 'charts', component: ChartsComponent },
   { path: 'screen/:id', component: ScreenComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
