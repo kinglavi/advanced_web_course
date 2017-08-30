@@ -1,0 +1,10 @@
+
+
+<div class="feed" >
+    <app-loading [condition]="isLoading"></app-loading>
+    <div *ngIf="!isLoading">
+        <h3>{{data.feed.title}}</h3>
+        <div [innerHTML]="data.items[0].content">
+    </div>
+   </div>
+</div>
