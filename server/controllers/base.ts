@@ -1,6 +1,6 @@
 abstract class BaseCtrl {
 
-  abstract model: any;
+  public abstract model: any;
 
   // Get all
   getAll = (req, res) => {

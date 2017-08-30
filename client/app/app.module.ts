@@ -9,6 +9,11 @@ import { AuthGuardLogin } from './services/auth-guard-login.service';
 import { AuthGuardAdmin } from './services/auth-guard-admin.service';
 import { AppComponent } from './app.component';
 import { AdsComponent } from './ads/ads.component';
+import { ScreenComponent } from './screen/screen.component';
+
+import { Template1Component } from './screen/Templates/Template1.component';
+import { Template2Component } from './screen/Templates/Template2.component';
+import { Template3Component } from './screen/Templates/Template3.component';
 import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
@@ -30,7 +35,11 @@ import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
     LogoutComponent,
     AccountComponent,
     AdminComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ScreenComponent,
+    Template1Component, 
+    Template2Component,
+    Template3Component
   ],
   imports: [
     RoutingModule,
@@ -44,6 +53,7 @@ import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
     AdService,
     UserService
   ],
+  entryComponents: [ Template1Component, Template2Component,Template3Component ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })

@@ -2,22 +2,17 @@ import * as mongoose from 'mongoose';
 
 const adSchema = new mongoose.Schema({
   name: String,
-  weight: Number,
-  age: Number,
-  screenIds: [Number],
-  images: [String],
-  template: String,
-  duration: Number,
-  timing: {
+  adText: [String],
+  screens: [Number],
+  imageLink: [String],
+  templateLink: String,
+  ttl: Number,
+  timeFrames: {
     startDate: Date,
     endDate: Date,
-    daySchedule: [
-      {
-        from: { dayTimeInSeconds: Number},
-        to: { dayTimeInSeconds: Number},
-        days: [Number]
-      }
-    ]
+    days: [Number],
+    startTime:String,
+    endTime:String
   },
 });
 
