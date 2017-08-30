@@ -18,7 +18,7 @@ import { AuthGuardAdmin } from './services/auth-guard-admin.service';
 
 const routes: Routes = [
   { path: '', component: AboutComponent },
-  { path: 'cats', component: AdsComponent },
+  { path: 'Ads', component: AdsComponent },
   { path: 'charts', component: ChartsComponent },
   { path: 'screen/:id', component: ScreenComponent},
   { path: 'register', component: RegisterComponent },

@@ -1,6 +1,6 @@
-import Cat from '../models/ad';
+import Ad from '../models/ad';
 import BaseCtrl from './base';
 
-export default class CatCtrl extends BaseCtrl {
-  model = Cat;
+export default class AdCtrl extends BaseCtrl {
+  model = Ad;
 }

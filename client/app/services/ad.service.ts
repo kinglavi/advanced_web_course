@@ -14,28 +14,28 @@ export class AdService {
 
   constructor(private http: Http) { }
 
-  getCats(): Observable<any> {
+  getAds(): Observable<any> {
     return this.http.get('/api/ads').map(res => res.json());
   }
 
-  countCats(): Observable<any> {
+  countAds(): Observable<any> {
     return this.http.get('/api/ads/count').map(res => res.json());
   }
 
-  addCat(cat): Observable<any> {
-    return this.http.post('/api/cat', JSON.stringify(cat), this.options);
+  addAd(Ad): Observable<any> {
+    return this.http.post('/api/ads', JSON.stringify(Ad), this.options);
   }
 
-  getCat(cat): Observable<any> {
-    return this.http.get(`/api/cat/${cat._id}`).map(res => res.json());
+  getAd(Ad): Observable<any> {
+    return this.http.get(`/api/ads/${Ad._id}`).map(res => res.json());
   }
 
-  editCat(cat): Observable<any> {
-    return this.http.put(`/api/cat/${cat._id}`, JSON.stringify(cat), this.options);
+  editAd(Ad): Observable<any> {
+    return this.http.put(`/api/ads/${Ad._id}`, JSON.stringify(Ad), this.options);
   }
 
-  deleteCat(cat): Observable<any> {
-    return this.http.delete(`/api/cat/${cat._id}`, this.options);
+  deleteAd(Ad): Observable<any> {
+    return this.http.delete(`/api/ads/${Ad._id}`, this.options);
   }
 
   

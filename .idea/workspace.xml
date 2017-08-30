@@ -8,9 +8,9 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/services/charts.service.ts" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/days.json" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/g-news.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/app.module.ts" afterPath="$PROJECT_DIR$/client/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/routing.module.ts" afterPath="$PROJECT_DIR$/client/app/routing.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes.ts" afterPath="$PROJECT_DIR$/server/routes.ts" />
+      <change type="MODIFIAdION" beforePath="$PROJECT_DIR$/client/app/app.module.ts" afterPath="$PROJECT_DIR$/client/app/app.module.ts" />
+      <change type="MODIFIAdION" beforePath="$PROJECT_DIR$/client/app/routing.module.ts" afterPath="$PROJECT_DIR$/client/app/routing.module.ts" />
+      <change type="MODIFIAdION" beforePath="$PROJECT_DIR$/server/routes.ts" afterPath="$PROJECT_DIR$/server/routes.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -82,8 +82,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/app/cats/cats.component.html" />
-        <option value="$PROJECT_DIR$/client/app/cats/cats.component.ts" />
+        <option value="$PROJECT_DIR$/client/app/Ads/Ads.component.html" />
+        <option value="$PROJECT_DIR$/client/app/Ads/Ads.component.ts" />
         <option value="$PROJECT_DIR$/client/app/ads/ads.component.ts" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/client/app/charts/g-news.js" />
@@ -422,7 +422,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/cat.ts">
+    <entry file="file://$PROJECT_DIR$/server/controllers/Ad.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -494,7 +494,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/cat.ts">
+    <entry file="file://$PROJECT_DIR$/server/controllers/Ad.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -667,7 +667,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/cat.ts">
+    <entry file="file://$PROJECT_DIR$/server/controllers/Ad.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />

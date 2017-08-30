@@ -1,24 +1,24 @@
 import * as express from 'express';
 
-import CatCtrl from './controllers/cat';
+import AdCtrl from './controllers/Ad';
 import UserCtrl from './controllers/user';
-import Cat from './models/ad';
+import Ad from './models/ad';
 import User from './models/user';
 
 export default function setRoutes(app) {
 
   const router = express.Router();
 
-  const catCtrl = new CatCtrl();
+  const adCtrl = new AdCtrl();
   const userCtrl = new UserCtrl();
 
-  // Cats
-  router.route('/ads').get(catCtrl.getAll);
-  router.route('/ads/count').get(catCtrl.count);
-  router.route('/cat').post(catCtrl.insert);
-  router.route('/cat/:id').get(catCtrl.get);
-  router.route('/cat/:id').put(catCtrl.update);
-  router.route('/cat/:id').delete(catCtrl.delete);
+  // Ads
+  router.route('/ads').get(adCtrl.getAll);
+  router.route('/ads/count').get(adCtrl.count);
+  router.route('/ads').post(adCtrl.insert);
+  router.route('/ads/:id').get(adCtrl.get);
+  router.route('/ads/:id').put(adCtrl.update);
+  router.route('/ads/:id').delete(adCtrl.delete);
 
   router.get('/stats/day/:id', (req, res) => {
 
@@ -54,7 +54,7 @@ export default function setRoutes(app) {
   router.route('/user/:id').put(userCtrl.update);
   router.route('/user/:id').delete(userCtrl.delete);
 
-  // Apply the routes to our application with the prefix /api
+  // Apply the routes to our appliAdion with the prefix /api
   app.use('/api', router);
 
 }
