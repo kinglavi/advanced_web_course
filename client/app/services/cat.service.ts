@@ -5,35 +5,35 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class AdService {
+export class CatService {
 
   private headers = new Headers({ 'Content-Type': 'application/json', 'charset': 'UTF-8' });
   private options = new RequestOptions({ headers: this.headers });
 
   constructor(private http: Http) { }
 
-  getAds(): Observable<any> {
+  getCats(): Observable<any> {
     return this.http.get('/api/ads').map(res => res.json());
   }
 
-  countAds(): Observable<any> {
+  countCats(): Observable<any> {
     return this.http.get('/api/ads/count').map(res => res.json());
   }
 
-  addAd(ad): Observable<any> {
-    return this.http.post('/api/ad', JSON.stringify(ad), this.options);
+  addCat(cat): Observable<any> {
+    return this.http.post('/api/cat', JSON.stringify(cat), this.options);
   }
 
-  getAd(ad): Observable<any> {
-    return this.http.get(`/api/ad/${ad._id}`).map(res => res.json());
+  getCat(cat): Observable<any> {
+    return this.http.get(`/api/cat/${cat._id}`).map(res => res.json());
   }
 
-  editAd(ad): Observable<any> {
-    return this.http.put(`/api/ad/${ad._id}`, JSON.stringify(ad), this.options);
+  editCat(cat): Observable<any> {
+    return this.http.put(`/api/cat/${cat._id}`, JSON.stringify(cat), this.options);
   }
 
-  deleteAd(ad): Observable<any> {
-    return this.http.delete(`/api/ad/${ad._id}`, this.options);
+  deleteCat(cat): Observable<any> {
+    return this.http.delete(`/api/cat/${cat._id}`, this.options);
   }
 
 }

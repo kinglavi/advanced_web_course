@@ -1,0 +1,14 @@
+#charts-container {
+  text-align: center;
+  color: white; }
+
+#charts {
+  margin-bottom: 15px; }
+
+.title {
+  font-size: 20px;
+  line-height: 30px;
+  border-bottom: 1px white solid;
+  margin-bottom: 15px; }
+
+/*# sourceMappingURL=charts.component.css.map */
