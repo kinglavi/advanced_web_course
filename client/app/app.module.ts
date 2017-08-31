@@ -29,6 +29,7 @@ import { MyDatePickerModule } from 'mydatepicker';
 import {MultiselectDropdownModule} from 'angular-2-dropdown-multiselect';
 import { BrowserModule } from '@angular/platform-browser';
 import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
+import {DateTimePickerModule} from "ng-pick-datetime";
 
 
 @NgModule({
@@ -55,7 +56,7 @@ import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
     MultiselectDropdownModule,
     BrowserModule,
     MyDatePickerModule,
-    NKDatetimeModule
+    BrowserModule
   ],
   providers: [
     AuthService,

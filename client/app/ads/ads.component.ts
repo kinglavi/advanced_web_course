@@ -6,8 +6,6 @@ import { AdService } from '../services/ad.service';
 import { ToastComponent } from '../shared/toast/toast.component';
 import {IMultiSelectOption, IMultiSelectSettings, IMultiSelectTexts} from 'angular-2-dropdown-multiselect';
 import {IMyDateModel, IMyDpOptions, IMySelector} from 'mydatepicker';
-import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
-import * as $ from 'jquery';
 
 @Component({
   selector: 'app-ads',
@@ -32,7 +30,21 @@ export class AdsComponent implements OnInit {
   };
   startDate: Object = '';
   endDate: Object;
-  ad = {};
+  ad = {
+    name: String,
+    adText: [String],
+    screens: [Number],
+    imageLink: [String],
+    templateLink: String,
+    ttl: Number,
+    timeFrames: {
+      startDate: Date,
+      endDate: Date,
+      days: [Number],
+      startTime: String,
+      endTime: String
+    }
+  };
   ads = [];
   startTime;
   isLoading = true;
@@ -45,7 +57,6 @@ export class AdsComponent implements OnInit {
   screenOptions: IMultiSelectOption[];
   templateOptions: IMultiSelectOption[];
   dayOptions: IMultiSelectOption[];
-
   screenIds = [];
   imageIds: number[];
   days = [];
@@ -114,9 +125,6 @@ export class AdsComponent implements OnInit {
     });
   }
 
-  changeStartTime(val) {
-
-  }
 
   onDateChanged(event: IMyDateModel) {
     this.closeSelector();
@@ -131,10 +139,16 @@ export class AdsComponent implements OnInit {
   onChangeScreen() {
     console.log(this.screenOption);
     this.screenIds = this.screenOption;
+    this.ad.screens = this.screenIds;
   }
 
   onChangeImage() {
+    console.log(this.imageOption);
+    console.log(this.imageOptions);
     this.imageIds = this.imageOption;
+    // for (var key in this.imageOptions.values()) {
+    //   this.ad.imageLink.push()
+    // }
   }
 
   onChangeTemplate() {
@@ -172,7 +186,21 @@ export class AdsComponent implements OnInit {
 
   cancelEditing() {
     this.isEditing = false;
-    this.ad = {};
+    this.ad = {
+      name: String,
+      adText: [String],
+      screens: [Number],
+      imageLink: [String],
+      templateLink: String,
+      ttl: Number,
+      timeFrames: {
+        startDate: Date,
+        endDate: Date,
+        days: [Number],
+        startTime: String,
+        endTime: String
+      }
+    };
     this.toast.setMessage('item editing cancelled.', 'warning');
     // reload the ads to reset the editing
     this.getAds();

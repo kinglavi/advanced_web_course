@@ -34,7 +34,7 @@
         <td colspan="4">
           <form class="form-inline" #form="ngForm" (ngSubmit)="editAd(ad)" style="display:inline">
             <div class="form-group">
-              <input class="form-control" type="text" name="name" [(ngModel)]="ad.name" placeholder="Name" required>
+              <input class="form-control" name="name" [(ngModel)]="ad.name" placeholder="Name" required>
             </div>
             <div class="form-group">
               <input class="form-control" type="number" name="age" [(ngModel)]="ad.age" placeholder="Age" min="0" required>
@@ -61,12 +61,12 @@
       <tr>
         <th>
           <div class="form-inline">
-            Name: <input class="form-control" type="text" name="name" formControlName="name" placeholder="Name">
+            Name: <input class="form-control" name="name" formControlName="name" placeholder="Name">
           </div>
         </th>
         <th>
           <div class="form-inline">
-            Text: <input class="form-control" type="text" name="text" formControlName="text" placeholder="Text" step="any" >
+            Text: <input class="form-control"  placeholder="Text" step="any" >
           </div>
         </th>
       </tr>
@@ -102,8 +102,8 @@
         </th>
         <th>
           <div class="form-inline">
-            Duration: <input class="form-control" type="number" name="ttl"
-                   formControlName="ttl" placeholder="Duration in min"
+            Duration(Min.): <input class="form-control" type="number" name="ttl"
+                    placeholder="Duration in min"
                    step="any" min="1" max="60">
           </div>
         </th>
@@ -147,7 +147,37 @@
           </div>
         </th>
         <th>
-          <datetime [datepicker]="false" [(ngModel)]="startDate"></datetime>
+          <tr>
+           <th >Start Time:</th>
+            <th>
+                <div class="time-picker-label">
+                  <input class="form-control time-picker" [ngModelOptions]="{standalone: true}" type="number" name="startTimeHour" [(ngModel)]="ad.age" placeholder="Hour" min="0" max="23" required>
+                </div>
+            </th>
+            <th>
+              <div class="time-picker-label">
+                <input class="form-control time-picker" [ngModelOptions]="{standalone: true}" type="number" name="startTimeMinute" [(ngModel)]="ad.age" placeholder="Min." min="0" max="59" required>
+              </div>
+            </th>
+          </tr>
+        </th>
+      </tr>
+      <tr>
+        <th></th>
+        <th>
+      <tr>
+        <th >End Time:</th>
+        <th>
+          <div class="time-picker-label">
+            <input class="form-control time-picker" [ngModelOptions]="{standalone: true}" type="number" name="startTimeHour" [(ngModel)]="ad.age" placeholder="Hour" min="0" max="23" required>
+          </div>
+        </th>
+        <th>
+          <div class="time-picker-label">
+            <input class="form-control time-picker" [ngModelOptions]="{standalone: true}" type="number" name="startTimeMinute" [(ngModel)]="ad.age" placeholder="Min." min="0" max="59" required>
+          </div>
+        </th>
+      </tr>
         </th>
       </tr>
       </thead>
