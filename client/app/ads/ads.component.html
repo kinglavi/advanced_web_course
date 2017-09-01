@@ -93,16 +93,20 @@
       <tr>
         <th>
           <div class="form-inline" [formGroup]="myGroup">
-            Templates: <ss-multiselect-dropdown [options]="templateOptions"
-                                     [(ngModel)]="templateOption"
-                                     [ngModelOptions]="{standalone: true}"
-                                     (ngModelChange)="onChangeTemplate($event)"
-            ></ss-multiselect-dropdown>
+            Templates: <select (change)="onChangeTemplate($event.target.options)">
+            <option *ngFor="let option of templateOptions"
+                    [value]="option" (change)="onChangeTemplate($event)"
+                    [selected]="">
+              {{option}}
+            </option>
+          </select>
           </div>
         </th>
         <th>
           <div class="form-inline">
             Duration(Min.): <input class="form-control" type="number" name="ttl"
+                     [(ngModel)]="ad.ttl"
+                     [ngModelOptions]="{standalone: true}"
                     placeholder="Duration in min"
                    step="any" min="1" max="60">
           </div>
@@ -115,7 +119,7 @@
               <my-date-picker name="mydate" class="datePicker"
                                           [options]="datePickerOptions"
                                           [placeholder]="startDatePlaceHolder"
-                                          [(ngModel)]="startDate"
+                                          [(ngModel)]="ad.timeFrames.startDate"
                                           [selector]="selector"
                                           (dateChanged)="onDateChanged($event)"
             ></my-date-picker>
@@ -128,7 +132,7 @@
               <my-date-picker name="mydate" class="datePicker"
                               [options]="datePickerOptions"
                               [placeholder]="endDatePlaceHolder"
-                              [(ngModel)]="endDate"
+                              [(ngModel)]="ad.timeFrames.endDate"
                               [selector]="selector"
                               (dateChanged)="onDateChanged($event)"
               ></my-date-picker>
@@ -151,12 +155,19 @@
            <th >Start Time:</th>
             <th>
                 <div class="time-picker-label">
-                  <input class="form-control time-picker" [ngModelOptions]="{standalone: true}" type="number" name="startTimeHour" [(ngModel)]="ad.age" placeholder="Hour" min="0" max="23" required>
+                  <input class="form-control time-picker"
+                         [ngModelOptions]="{standalone: true}" type="number"
+                         name="startTimeHour" [(ngModel)]="startTimeHour"
+                         placeholder="Hour" min="0" max="23" required
+                          (change)="changeStartTime($event)">
                 </div>
             </th>
             <th>
               <div class="time-picker-label">
-                <input class="form-control time-picker" [ngModelOptions]="{standalone: true}" type="number" name="startTimeMinute" [(ngModel)]="ad.age" placeholder="Min." min="0" max="59" required>
+                <input class="form-control time-picker" [ngModelOptions]="{standalone: true}"
+                       type="number" name="startTimeMinute" (change)="changeStartTime($event)"
+                       [(ngModel)]="startTimeMinute" placeholder="Min."
+                       min="0" max="59" required>
               </div>
             </th>
           </tr>
@@ -169,12 +180,20 @@
         <th >End Time:</th>
         <th>
           <div class="time-picker-label">
-            <input class="form-control time-picker" [ngModelOptions]="{standalone: true}" type="number" name="startTimeHour" [(ngModel)]="ad.age" placeholder="Hour" min="0" max="23" required>
+            <input class="form-control time-picker"
+                   [ngModelOptions]="{standalone: true}"
+                   type="number"
+                   name="endTimeHour" (change)="changeEndTime($event)"
+                   [(ngModel)]="endTimeHour" placeholder="Hour"
+                   min="0" max="23" required>
           </div>
         </th>
         <th>
           <div class="time-picker-label">
-            <input class="form-control time-picker" [ngModelOptions]="{standalone: true}" type="number" name="startTimeMinute" [(ngModel)]="ad.age" placeholder="Min." min="0" max="59" required>
+            <input class="form-control time-picker" [ngModelOptions]="{standalone: true}"
+                   type="number" name="endTimeMinute"
+                   [(ngModel)]="endTimeMinute" (change)="changeEndTime($event)"
+                   placeholder="Min." min="0" max="59" required>
           </div>
         </th>
       </tr>

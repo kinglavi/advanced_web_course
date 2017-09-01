@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Pipe, PipeTransform} from '@angular/core';
 import { Http } from '@angular/http';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
@@ -6,6 +6,13 @@ import { AdService } from '../services/ad.service';
 import { ToastComponent } from '../shared/toast/toast.component';
 import {IMultiSelectOption, IMultiSelectSettings, IMultiSelectTexts} from 'angular-2-dropdown-multiselect';
 import {IMyDateModel, IMyDpOptions, IMySelector} from 'mydatepicker';
+
+@Pipe({ name: 'keys',  pure: false })
+export class KeysPipe implements PipeTransform {
+  transform(value: any, args: any[] = null): any {
+    return Object.keys(value); // .map(key => value[key]);
+  }
+}
 
 @Component({
   selector: 'app-ads',
@@ -31,20 +38,25 @@ export class AdsComponent implements OnInit {
   startDate: Object = '';
   endDate: Object;
   ad = {
-    name: String,
-    adText: [String],
-    screens: [Number],
-    imageLink: [String],
-    templateLink: String,
-    ttl: Number,
+    name: '',
+    adText: [''],
+    screens: [],
+    imageLink: [],
+    templateLink: '',
+    ttl: 0,
     timeFrames: {
-      startDate: Date,
-      endDate: Date,
-      days: [Number],
-      startTime: String,
-      endTime: String
+      startDate: '',
+      endDate: '',
+      days: [],
+      startTime: '',
+      endTime: ''
     }
   };
+  startTimeHour = 0;
+  startTimeMinute = 0;
+  endTimeHour = 0;
+  endTimeMinute = 0;
+
   ads = [];
   startTime;
   isLoading = true;
@@ -55,13 +67,13 @@ export class AdsComponent implements OnInit {
   dayOption: number[];
   imageOptions: IMultiSelectOption[];
   screenOptions: IMultiSelectOption[];
-  templateOptions: IMultiSelectOption[];
+
   dayOptions: IMultiSelectOption[];
   screenIds = [];
   imageIds: number[];
   days = [];
   templateIds = [];
-
+  templateOptions = ['Template 1', 'Template 2'];
   addAdForm: FormGroup;
   name = new FormControl('', Validators.required);
   age = new FormControl('', Validators.required);
@@ -99,13 +111,10 @@ export class AdsComponent implements OnInit {
       { id: 2, name: 'Screen 2' },
     ];
     this.imageOptions = [
-      { id: 1, name: 'Cat image' },
-      { id: 2, name: 'Dog image' },
+      { id: 1, name: 'Cat image', params: 'https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg' },
+      { id: 2, name: 'Dog image', params: 'https://static.pexels.com/photos/356378/pexels-photo-356378.jpeg' },
     ];
-    this.templateOptions = [
-      { id: 1, name: 'Template 1' },
-      { id: 2, name: 'Template 2' },
-    ];
+
 
     this.dayOptions = [
       { id: 1, name: 'Sunday' },
@@ -125,6 +134,35 @@ export class AdsComponent implements OnInit {
     });
   }
 
+  changeStartTime($event) {
+    this.ad.timeFrames.startTime = '';
+    if (this.startTimeHour < 10) {
+      this.ad.timeFrames.startTime = '0';
+    }
+    this.ad.timeFrames.startTime += this.startTimeHour;
+
+    this.ad.timeFrames.startTime += ':';
+
+    if (this.startTimeMinute < 10) {
+      this.ad.timeFrames.startTime += '0';
+    }
+    this.ad.timeFrames.startTime += this.startTimeMinute;
+  }
+
+  changeEndTime($event) {
+    this.ad.timeFrames.endTime = '';
+    if (this.endTimeHour < 10) {
+      this.ad.timeFrames.endTime = '0';
+    }
+    this.ad.timeFrames.endTime += this.endTimeHour;
+
+    this.ad.timeFrames.endTime += ':';
+
+    if (this.endTimeMinute < 10) {
+      this.ad.timeFrames.endTime += '0';
+    }
+    this.ad.timeFrames.endTime += this.endTimeMinute;
+  }
 
   onDateChanged(event: IMyDateModel) {
     this.closeSelector();
@@ -143,20 +181,29 @@ export class AdsComponent implements OnInit {
   }
 
   onChangeImage() {
-    console.log(this.imageOption);
-    console.log(this.imageOptions);
     this.imageIds = this.imageOption;
-    // for (var key in this.imageOptions.values()) {
-    //   this.ad.imageLink.push()
-    // }
+    this.ad.imageLink = [];
+    this.imageOptions.forEach(image => {
+      if ((image.id - 1) in this.imageOption) {
+        this.ad.imageLink.push(image.params);
+      }
+    });
   }
 
-  onChangeTemplate() {
-    this.templateIds = this.templateOption;
+  onChangeTemplate(option) {
+    console.log(option);
+    this.ad.templateLink = this.templateOptions[option.selectedIndex];
+    console.log(this.ad.templateLink);
   }
 
-  onChangeDay() {
-    this.days = this.imageOption;
+  onChangeDay(days) {
+    this.days = this.dayOption;
+    this.ad.timeFrames.days = [];
+    this.dayOptions.forEach(day => {
+      if ((day.id - 1) in this.dayOption) {
+        this.ad.timeFrames.days.push(day.id);
+      }
+    });
   }
 
   getAds() {
@@ -187,18 +234,18 @@ export class AdsComponent implements OnInit {
   cancelEditing() {
     this.isEditing = false;
     this.ad = {
-      name: String,
-      adText: [String],
-      screens: [Number],
-      imageLink: [String],
-      templateLink: String,
-      ttl: Number,
+      name: '',
+      adText: [''],
+      screens: [],
+      imageLink: [],
+      templateLink: '',
+      ttl: 0,
       timeFrames: {
-        startDate: Date,
-        endDate: Date,
-        days: [Number],
-        startTime: String,
-        endTime: String
+        startDate: '',
+        endDate: '',
+        days: [],
+        startTime: '',
+        endTime: ''
       }
     };
     this.toast.setMessage('item editing cancelled.', 'warning');
