@@ -25,7 +25,7 @@ export class AdsComponent implements OnInit {
   datePickerOptions: IMyDpOptions = {
     // other options...
     todayBtnTxt: 'Today',
-    dateFormat: 'yyyy-mm-dd',
+    dateFormat: 'dd/mm/yyyy',
     firstDayOfWeek: 'su',
     satHighlight: true,
     // allowDeselectDate: true,
@@ -45,8 +45,8 @@ export class AdsComponent implements OnInit {
     templateLink: '',
     ttl: 0,
     timeFrames: {
-      startDate: '',
-      endDate: '',
+      startDate: new Date(),
+      endDate: new Date(),
       days: [],
       startTime: '',
       endTime: ''
@@ -76,8 +76,7 @@ export class AdsComponent implements OnInit {
   templateOptions = ['Template 1', 'Template 2'];
   addAdForm: FormGroup;
   name = new FormControl('', Validators.required);
-  age = new FormControl('', Validators.required);
-  weight = new FormControl('', Validators.required);
+
   myGroup= new FormGroup({
     firstName: new FormControl()
   });
@@ -129,8 +128,9 @@ export class AdsComponent implements OnInit {
     this.getAds();
     this.addAdForm = this.formBuilder.group({
       name: this.name,
-      age: this.age,
-      weight: this.weight,
+      text: this.ad.adText,
+      // screen: this.ad.screenIds,
+      ttl: this.ad.ttl
     });
   }
 
@@ -164,7 +164,14 @@ export class AdsComponent implements OnInit {
     this.ad.timeFrames.endTime += this.endTimeMinute;
   }
 
-  onDateChanged(event: IMyDateModel) {
+  onStartDateChanged(date: IMyDateModel) {
+
+    this.ad.timeFrames.startDate = new Date(date.formatted);
+    this.closeSelector();
+  }
+
+  onEndDateChanged(date: IMyDateModel) {
+    this.ad.timeFrames.endDate = new Date(date.formatted);
     this.closeSelector();
   }
 
@@ -215,9 +222,10 @@ export class AdsComponent implements OnInit {
   }
 
   addAd() {
-    this.adService.addAd(this.addAdForm.value).subscribe(
+    this.adService.addAd(this.ad).subscribe(
       res => {
         const newAd = res.json();
+        console.log(newAd);
         this.ads.push(newAd);
         this.addAdForm.reset();
         this.toast.setMessage('item added successfully.', 'success');
@@ -241,8 +249,8 @@ export class AdsComponent implements OnInit {
       templateLink: '',
       ttl: 0,
       timeFrames: {
-        startDate: '',
-        endDate: '',
+        startDate: new Date(),
+        endDate: new Date(),
         days: [],
         startTime: '',
         endTime: ''
