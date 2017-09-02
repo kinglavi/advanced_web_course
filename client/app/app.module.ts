@@ -23,10 +23,13 @@ import { AccountComponent } from './account/account.component';
 import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ChartsComponent } from './charts/charts.component';
-import { FeedComponent } from './feed/feed.component'
+import { FeedComponent } from './feed/feed.component';
+import { MyDatePickerModule } from 'mydatepicker';
 
-import {Ng2SmartTableModule} from 'ng2-smart-table';
-// import {Ng2SmartTableModule} from 'ng2-smart-table';
+import {MultiselectDropdownModule} from 'angular-2-dropdown-multiselect';
+import { BrowserModule } from '@angular/platform-browser';
+
+
 
 @NgModule({
   declarations: [
@@ -42,13 +45,17 @@ import {Ng2SmartTableModule} from 'ng2-smart-table';
     ChartsComponent,
     FeedComponent,
     ScreenComponent,
-    Template1Component, 
+    Template1Component,
     Template2Component,
     Template3Component
   ],
   imports: [
     RoutingModule,
-    SharedModule
+    SharedModule,
+    MultiselectDropdownModule,
+    BrowserModule,
+    MyDatePickerModule,
+    BrowserModule
   ],
   providers: [
     AuthService,
@@ -58,7 +65,7 @@ import {Ng2SmartTableModule} from 'ng2-smart-table';
     UserService,
     ChartsService
   ],
-  entryComponents: [ Template1Component, Template2Component,Template3Component ],
+  entryComponents: [ Template1Component, Template2Component, Template3Component ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
