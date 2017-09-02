@@ -9,8 +9,16 @@
       <thead class="thead-default">
       <tr>
         <th>Name</th>
-        <th>Age</th>
-        <th>Weight</th>
+        <th>Text</th>
+        <th>Screens</th>
+        <th>Images</th>
+        <th>Template</th>
+        <th>Duration</th>
+        <th>From date</th>
+        <th>To date</th>
+        <th>Days</th>
+        <th>From Time</th>
+        <th>To Time</th>
         <th>Actions</th>
       </tr>
       </thead>
@@ -22,10 +30,23 @@
       <tbody *ngIf="!isEditing">
       <tr *ngFor="let ad of ads">
         <td>{{ad.name}}</td>
-        <td>{{ad.age}}</td>
-        <td>{{ad.weight}}</td>
         <td>
-          <button class="btn btn-sm btn-warning" (click)="enableEditing(ad)"><i class="fa fa-pencil"></i> Edit</button> <button class="btn btn-sm btn-danger" (click)="deleteAd(ad)"><i class="fa fa-trash"></i> Delete</button>
+          <select>
+            <option *ngFor="let text of ad.adText">{{text}}</option>
+          </select>
+        </td>
+        <td>{{ad.screens}}</td>
+        <td>{{ad.imageLink}}</td>
+        <td>{{ad.templateLink}}</td>
+        <td>{{ad.ttl}}</td>
+        <td>{{ad.timeFrames.startDate}}</td>
+        <td>{{ad.timeFrames.endDate}}</td>
+        <td>{{ad.timeFrames.days}}</td>
+        <td>{{ad.timeFrames.startTime}}</td>
+        <td>{{ad.timeFrames.endTime}}</td>
+        <td>
+          <button class="btn btn-sm btn-warning" (click)="enableEditing(ad)"><i class="fa fa-pencil"></i> Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="deleteAd(ad)"><i class="fa fa-trash"></i> Delete</button>
         </td>
       </tr>
       </tbody>
