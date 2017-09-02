@@ -7,13 +7,13 @@ const adSchema = new mongoose.Schema({
   imageLink: [String],
   templateLink: String,
   ttl: Number,
-  timeFrames: {
+  timeFrames: [{
     startDate: Date,
     endDate: Date,
     days: [String],
     startTime: String,
     endTime: String
-  },
+  }],
 });
 
 const Ad = mongoose.model('Ad', adSchema);

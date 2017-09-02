@@ -37,6 +37,13 @@ export class AdsComponent implements OnInit {
   };
   startDate: Object = '';
   endDate: Object = '';
+  currentTimeFrame = {
+    startDate: new Date(),
+    endDate: new Date(),
+    days: [],
+    startTime: '',
+    endTime: ''
+  };
   ad = {
     name: '',
     adText: [],
@@ -44,13 +51,7 @@ export class AdsComponent implements OnInit {
     imageLink: [],
     templateLink: '',
     ttl: 0,
-    timeFrames: {
-      startDate: new Date(),
-      endDate: new Date(),
-      days: [],
-      startTime: '',
-      endTime: ''
-    }
+    timeFrames: []
   };
   startTimeHour;
   startTimeMinute;
@@ -134,19 +135,23 @@ export class AdsComponent implements OnInit {
     });
   }
 
-  changeStartTime($event) {
-    this.ad.timeFrames.startTime = '';
-    if (this.startTimeHour < 10) {
-      this.ad.timeFrames.startTime = '0';
-    }
-    this.ad.timeFrames.startTime += this.startTimeHour;
+  addTimeFrame() {
+    this.ad.timeFrames.push(this.currentTimeFrame);
+  }
 
-    this.ad.timeFrames.startTime += ':';
+  changeStartTime($event) {
+    this.currentTimeFrame.startTime = '';
+    if (this.startTimeHour < 10) {
+      this.currentTimeFrame.startTime = '0';
+    }
+    this.currentTimeFrame.startTime += this.startTimeHour;
+
+    this.currentTimeFrame.startTime += ':';
 
     if (this.startTimeMinute < 10) {
-      this.ad.timeFrames.startTime += '0';
+      this.currentTimeFrame.startTime += '0';
     }
-    this.ad.timeFrames.startTime += this.startTimeMinute;
+    this.currentTimeFrame.startTime += this.startTimeMinute;
   }
 
   addTextToArray() {
@@ -165,27 +170,27 @@ export class AdsComponent implements OnInit {
   }
 
   changeEndTime($event) {
-    this.ad.timeFrames.endTime = '';
+    this.currentTimeFrame.endTime = '';
     if (this.endTimeHour < 10) {
-      this.ad.timeFrames.endTime = '0';
+      this.currentTimeFrame.endTime = '0';
     }
-    this.ad.timeFrames.endTime += this.endTimeHour;
+    this.currentTimeFrame.endTime += this.endTimeHour;
 
-    this.ad.timeFrames.endTime += ':';
+    this.currentTimeFrame.endTime += ':';
 
     if (this.endTimeMinute < 10) {
-      this.ad.timeFrames.endTime += '0';
+      this.currentTimeFrame.endTime += '0';
     }
-    this.ad.timeFrames.endTime += this.endTimeMinute;
+    this.currentTimeFrame.endTime += this.endTimeMinute;
   }
 
   onStartDateChanged(date: IMyDateModel) {
-    this.ad.timeFrames.startDate = new Date(date.formatted);
+    this.currentTimeFrame.startDate = new Date(date.formatted);
     this.closeSelector();
   }
 
   onEndDateChanged(date: IMyDateModel) {
-    this.ad.timeFrames.endDate = new Date(date.formatted);
+    this.currentTimeFrame.endDate = new Date(date.formatted);
     this.closeSelector();
   }
 
@@ -220,12 +225,21 @@ export class AdsComponent implements OnInit {
   onChangeDay(days) {
     console.log(this.dayOption);
     this.days = this.dayOption;
-    this.ad.timeFrames.days = [];
+    this.currentTimeFrame.days = [];
     this.dayOptions.forEach(day => {
       if ((day.id - 1) in this.dayOption) {
-        this.ad.timeFrames.days.push(day.name);
+        this.currentTimeFrame.days.push(day.name);
       }
     });
+  }
+
+  deleteTime(timeFrame) {
+    console.log('lalala');
+    console.log(timeFrame);
+    const index = this.ad.timeFrames.indexOf(timeFrame);
+    if (index !== -1) {
+      this.ad.timeFrames.splice(index, 1);
+    }
   }
 
   getAds() {
@@ -263,13 +277,13 @@ export class AdsComponent implements OnInit {
       imageLink: [],
       templateLink: '',
       ttl: 0,
-      timeFrames: {
+      timeFrames: [{
         startDate: new Date(),
         endDate: new Date(),
         days: [],
         startTime: '',
         endTime: ''
-      }
+      }]
     };
     this.toast.setMessage('item editing cancelled.', 'warning');
     // reload the ads to reset the editing

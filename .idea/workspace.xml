@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9457d928-b207-410b-8bd8-2ccb5b307872" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/ads/ads.component.html" afterPath="$PROJECT_DIR$/client/app/ads/ads.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/ads/ads.component.ts" afterPath="$PROJECT_DIR$/client/app/ads/ads.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/ad.ts" afterPath="$PROJECT_DIR$/server/models/ad.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -27,8 +26,8 @@
             <file leaf-file-name="ad.ts" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/server/models/ad.ts">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="240">
-                    <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+                  <state relative-caret-position="300">
+                    <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
                     <folding />
                   </state>
                 </provider>
@@ -41,11 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ads.component.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ads.component.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/ads/ads.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="182" column="73" lean-forward="false" selection-start-line="182" selection-start-column="73" selection-end-line="182" selection-end-column="73" />
+            <state relative-caret-position="152">
+              <caret line="263" column="29" lean-forward="false" selection-start-line="263" selection-start-column="29" selection-end-line="263" selection-end-column="29" />
               <folding>
                 <element signature="n#style#0;n#form#0;n#td#0;n#tr#0;n#tbody#2;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -54,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ads.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ads.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/ads/ads.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+            <state relative-caret-position="215">
+              <caret line="239" column="17" lean-forward="false" selection-start-line="239" selection-start-column="17" selection-end-line="239" selection-end-column="17" />
               <folding>
                 <element signature="e#0#69#0" expanded="true" />
               </folding>
@@ -153,10 +152,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Pipe</find>
-      <find>duration</find>
-      <find>dayOptio</find>
-      <find>start</find>
       <find>add</find>
       <find>text</find>
       <find>ads</find>
@@ -183,7 +178,14 @@
       <find>option</find>
       <find>sunda</find>
       <find>dayOptions</find>
+      <find>Add</find>
+      <find>ad.timeFrames</find>
+      <find>add time</find>
+      <find>delete</find>
     </findStrings>
+    <replaceStrings>
+      <replace>currentTimeFrame</replace>
+    </replaceStrings>
     <dirStrings>
       <dir>E:\klavi\Desktop\collage of management\advance web course\new_starter\ad_project\node_modules\@angular</dir>
     </dirStrings>
@@ -196,11 +198,11 @@
       <list>
         <option value="$PROJECT_DIR$/client/app/ads/ads.component.scss" />
         <option value="$PROJECT_DIR$/client/index.html" />
-        <option value="$PROJECT_DIR$/client/app/ads/ads.component.html" />
         <option value="$PROJECT_DIR$/client/app/routing.module.ts" />
         <option value="$PROJECT_DIR$/client/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/client/app/ads/ads.component.ts" />
         <option value="$PROJECT_DIR$/server/models/ad.ts" />
+        <option value="$PROJECT_DIR$/client/app/ads/ads.component.ts" />
+        <option value="$PROJECT_DIR$/client/app/ads/ads.component.html" />
       </list>
     </option>
   </component>
@@ -444,7 +446,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1504120162827</updated>
-      <workItem from="1504120164726" duration="42964000" />
+      <workItem from="1504120164726" duration="45024000" />
     </task>
     <task id="LOCAL-00001" summary="updated ad component">
       <created>1504121028987</created>
@@ -495,11 +497,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504386979173</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="days changed to words">
+      <created>1504392175839</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1504392175839</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42964000" />
+    <option name="totallyTimeSpent" value="45024000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1032" y="-8" width="1040" height="744" extended-state="6" />
@@ -540,7 +549,8 @@
     <MESSAGE value="successfully adding ads" />
     <MESSAGE value="finished adding ad in ad page" />
     <MESSAGE value="added table" />
-    <option name="LAST_COMMIT_MESSAGE" value="added table" />
+    <MESSAGE value="days changed to words" />
+    <option name="LAST_COMMIT_MESSAGE" value="days changed to words" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -730,31 +740,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/ads/ads.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="182" column="73" lean-forward="false" selection-start-line="182" selection-start-column="73" selection-end-line="182" selection-end-column="73" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#td#0;n#tr#0;n#tbody#2;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/models/ad.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="300">
+          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/ads/ads.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+        <state relative-caret-position="215">
+          <caret line="239" column="17" lean-forward="false" selection-start-line="239" selection-start-column="17" selection-end-line="239" selection-end-column="17" />
           <folding>
             <element signature="e#0#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/ads/ads.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="263" column="29" lean-forward="false" selection-start-line="263" selection-start-column="29" selection-end-line="263" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#td#0;n#tr#0;n#tbody#2;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -150,6 +150,17 @@
       </tr>
       <tr>
         <th>
+        <div class="form-inline">
+          <h2> Time properties:</h2>
+        </div>
+        </th>
+        <th>
+          <button class="btn btn-primary" type="button" width="10px"
+                  (click)="addTimeFrame()">add time</button>
+        </th>
+      </tr>
+      <tr>
+        <th>
           <div class="form-inline">
             <form #myForm="ngForm" novalidate class="form-inline">
               <my-date-picker name="mydate" class="datePicker"
@@ -235,7 +246,29 @@
       </tr>
       </thead>
     </table>
-
+      <table class="table table-bordered table-striped"
+             *ngIf="ad.timeFrames.length > 0">
+        <thead class="thead-default">
+        <tr>
+          <th>From date</th>
+          <th>To date</th>
+          <th>Days</th>
+          <th>From Time</th>
+          <th>To Time</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let timeFrame of ad.timeFrames">
+          <td>{{timeFrame.startDate}}</td>
+          <td>{{timeFrame.endDate}}</td>
+          <td>{{timeFrame.days}}</td>
+          <td>{{timeFrame.startTime}}</td>
+          <td>{{timeFrame.endTime}}</td>
+          <td><button type="button" (click)="deleteTime(timeFrame)">delete</button></td>
+        </tr>
+        </tbody>
+      </table>
 
       <button class="btn btn-primary" type="submit" [disabled]="!addAdForm.valid"><i class="fa fa-floppy-o"></i> Add</button>
     </form>
