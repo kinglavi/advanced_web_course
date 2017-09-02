@@ -218,11 +218,12 @@ export class AdsComponent implements OnInit {
   }
 
   onChangeDay(days) {
+    console.log(this.dayOption);
     this.days = this.dayOption;
     this.ad.timeFrames.days = [];
     this.dayOptions.forEach(day => {
       if ((day.id - 1) in this.dayOption) {
-        this.ad.timeFrames.days.push(day.id);
+        this.ad.timeFrames.days.push(day.name);
       }
     });
   }

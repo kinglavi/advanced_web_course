@@ -10,7 +10,7 @@ const adSchema = new mongoose.Schema({
   timeFrames: {
     startDate: Date,
     endDate: Date,
-    days: [Number],
+    days: [String],
     startTime: String,
     endTime: String
   },
