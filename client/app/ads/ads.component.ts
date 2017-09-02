@@ -71,7 +71,7 @@ export class AdsComponent implements OnInit {
   screenIds = [];
   imageIds: number[];
   days = [];
-  templateOptions = ['./Template1.html', './Template2.html',"./Template3.html"];
+  templateOptions = ['Template 1', 'Template 2'];
   addAdForm: FormGroup;
   name = new FormControl('', Validators.required);
   selectedText = '';

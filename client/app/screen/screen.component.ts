@@ -35,9 +35,9 @@ export class ScreenComponent implements OnInit, OnDestroy, AfterViewInit {
     this.weekday[4] = "Thursday";
     this.weekday[5] = "Friday";
     this.weekday[6] = "Saturday";
-    this.templates.set("./Template1.html",Template1Component);
-    this.templates.set("./Template2.html",Template2Component);
-    this.templates.set("./Template3.html",Template3Component);
+    this.templates.set("Template 3",Template1Component);
+    this.templates.set("Template 1",Template2Component);
+    this.templates.set("Template 2",Template3Component);
   }
 
   ngOnInit() {
