@@ -35,5 +35,8 @@ import { TemplateComponent } from './template.component';
 })
 export class Template1Component implements TemplateComponent {
   @Input() data: any;
+  setData(data){
+   this.data = data;
+ }
  
 }

@@ -29,6 +29,8 @@ abstract class BaseCtrl {
       if (err) {
         return console.error(err);
       }
+      if(this.model)
+
       res.status(200).json(item);
     });
   }

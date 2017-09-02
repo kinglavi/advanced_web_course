@@ -15,7 +15,7 @@ import { ScreenComponent } from './screen/screen.component';
 import { Template1Component } from './screen/Templates/Template1.component';
 import { Template2Component } from './screen/Templates/Template2.component';
 import { Template3Component } from './screen/Templates/Template3.component';
-import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './Home/Home.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
@@ -35,7 +35,7 @@ import { BrowserModule } from '@angular/platform-browser';
   declarations: [
     AppComponent,
     AdsComponent,
-    AboutComponent,
+    HomeComponent,
     RegisterComponent,
     LoginComponent,
     LogoutComponent,

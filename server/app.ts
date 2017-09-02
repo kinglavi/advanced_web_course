@@ -34,6 +34,7 @@ db.once('open', () => {
   let io = require('socket.io')(server);
   sockets(io);
 
+
   server.listen(app.get('port'), () => {
     console.log('Angular Full Stack listening on port ' + app.get('port'));
   });

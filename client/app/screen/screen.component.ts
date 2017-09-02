@@ -103,7 +103,7 @@ export class ScreenComponent implements OnInit, OnDestroy, AfterViewInit {
     viewContainerRef.clear();
 
     let componentRef = viewContainerRef.createComponent(componentFactory);
-    (<TemplateComponent>componentRef.instance).data = ad;
+    (<TemplateComponent>componentRef.instance).setData(ad);
   this.numSeconds++;
 }
 

@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AdsComponent } from './ads/ads.component';
 import { ScreenComponent } from './screen/screen.component';
-import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './Home/Home.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
@@ -17,7 +17,7 @@ import { AuthGuardAdmin } from './services/auth-guard-admin.service';
 
 
 const routes: Routes = [
-  { path: '', component: AboutComponent },
+  { path: '', component: HomeComponent },
   { path: 'Ads', component: AdsComponent },
   { path: 'charts', component: ChartsComponent },
   { path: 'screen/:id', component: ScreenComponent},

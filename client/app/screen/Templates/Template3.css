@@ -2,6 +2,8 @@ h1{
   font-size: 50px;
     color: white;
     margin-left: 20px;
+    position: absolute;
+    top: 90px;
     text-rendering: optimizelegibility;
     text-shadow: 0 0 6px rgba(0, 0, 0, 1);
 }
