@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9457d928-b207-410b-8bd8-2ccb5b307872" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/pipes/filter.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/ads/ads.component.html" afterPath="$PROJECT_DIR$/client/app/ads/ads.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/ads/ads.component.ts" afterPath="$PROJECT_DIR$/client/app/ads/ads.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/ad.ts" afterPath="$PROJECT_DIR$/server/models/ad.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/app.module.ts" afterPath="$PROJECT_DIR$/client/app/app.module.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -43,8 +44,8 @@
       <file leaf-file-name="ads.component.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/ads/ads.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="263" column="29" lean-forward="false" selection-start-line="263" selection-start-column="29" selection-end-line="263" selection-end-column="29" />
+            <state relative-caret-position="115">
+              <caret line="32" column="58" lean-forward="false" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
               <folding>
                 <element signature="n#style#0;n#form#0;n#td#0;n#tr#0;n#tbody#2;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -53,11 +54,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="filter.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/pipes/filter.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ads.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/ads/ads.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="239" column="17" lean-forward="false" selection-start-line="239" selection-start-column="17" selection-end-line="239" selection-end-column="17" />
+            <state relative-caret-position="116">
+              <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
               <folding>
                 <element signature="e#0#69#0" expanded="true" />
               </folding>
@@ -68,14 +79,10 @@
       <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-266">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="128">
+              <caret line="70" column="17" lean-forward="true" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
               <folding>
                 <element signature="e#0#65#0" expanded="true" />
-                <marker date="1504391406013" expanded="true" signature="2147:2157" ph="[...]" />
-                <marker date="1504391406013" expanded="true" signature="2147:2435" ph="{...}" />
-                <marker date="1504391406013" expanded="true" signature="2172:2284" ph="[...]" />
-                <marker date="1504391406013" expanded="true" signature="2461:2464" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -152,7 +159,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>add</find>
       <find>text</find>
       <find>ads</find>
       <find>addAdForm</find>
@@ -180,8 +186,9 @@
       <find>dayOptions</find>
       <find>Add</find>
       <find>ad.timeFrames</find>
-      <find>add time</find>
       <find>delete</find>
+      <find>add time</find>
+      <find>searchStrin</find>
     </findStrings>
     <replaceStrings>
       <replace>currentTimeFrame</replace>
@@ -199,8 +206,9 @@
         <option value="$PROJECT_DIR$/client/app/ads/ads.component.scss" />
         <option value="$PROJECT_DIR$/client/index.html" />
         <option value="$PROJECT_DIR$/client/app/routing.module.ts" />
-        <option value="$PROJECT_DIR$/client/app/app.module.ts" />
         <option value="$PROJECT_DIR$/server/models/ad.ts" />
+        <option value="$PROJECT_DIR$/client/app/pipes/filter.pipe" />
+        <option value="$PROJECT_DIR$/client/app/app.module.ts" />
         <option value="$PROJECT_DIR$/client/app/ads/ads.component.ts" />
         <option value="$PROJECT_DIR$/client/app/ads/ads.component.html" />
       </list>
@@ -269,7 +277,7 @@
               <item name="ad_project" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="pipes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ad_project" type="b2602c69:ProjectViewProjectNode" />
@@ -446,7 +454,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1504120162827</updated>
-      <workItem from="1504120164726" duration="45024000" />
+      <workItem from="1504120164726" duration="46445000" />
     </task>
     <task id="LOCAL-00001" summary="updated ad component">
       <created>1504121028987</created>
@@ -504,11 +512,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504392175839</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixed time frames">
+      <created>1504394243168</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1504394243168</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45024000" />
+    <option name="totallyTimeSpent" value="46445000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1032" y="-8" width="1040" height="744" extended-state="6" />
@@ -550,7 +565,8 @@
     <MESSAGE value="finished adding ad in ad page" />
     <MESSAGE value="added table" />
     <MESSAGE value="days changed to words" />
-    <option name="LAST_COMMIT_MESSAGE" value="days changed to words" />
+    <MESSAGE value="fixed time frames" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed time frames" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -718,20 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-266">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#65#0" expanded="true" />
-            <marker date="1504391406013" expanded="true" signature="2147:2157" ph="[...]" />
-            <marker date="1504391406013" expanded="true" signature="2147:2435" ph="{...}" />
-            <marker date="1504391406013" expanded="true" signature="2172:2284" ph="[...]" />
-            <marker date="1504391406013" expanded="true" signature="2461:2464" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/angular-2-dropdown-multiselect/dropdown/types.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -748,10 +750,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/pipes/filter.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="70" column="17" lean-forward="true" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/ads/ads.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="239" column="17" lean-forward="false" selection-start-line="239" selection-start-column="17" selection-end-line="239" selection-end-column="17" />
+        <state relative-caret-position="116">
+          <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
           <folding>
             <element signature="e#0#69#0" expanded="true" />
           </folding>
@@ -760,8 +780,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/ads/ads.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="263" column="29" lean-forward="false" selection-start-line="263" selection-start-column="29" selection-end-line="263" selection-end-column="29" />
+        <state relative-caret-position="115">
+          <caret line="32" column="58" lean-forward="false" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
           <folding>
             <element signature="n#style#0;n#form#0;n#td#0;n#tr#0;n#tbody#2;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />

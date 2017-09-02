@@ -5,6 +5,8 @@
 <div class="card" *ngIf="!isLoading">
   <h4 class="card-header">Current ads ({{ads.length}})</h4>
   <div class="card-block">
+    <input type="text" class="form-control" name="searchString"
+           placeholder="Type to search..." [(ngModel)]="searchByName">
     <table class="table table-bordered table-striped">
       <thead class="thead-default">
       <tr>
@@ -28,7 +30,7 @@
       </tr>
       </tbody>
       <tbody *ngIf="!isEditing">
-      <tr *ngFor="let ad of ads">
+      <tr *ngFor="let ad of ads | filter : 'name' : searchByName; let i = index">
         <td>{{ad.name}}</td>
         <td>
           <select>

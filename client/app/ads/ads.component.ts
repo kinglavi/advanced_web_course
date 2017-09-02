@@ -20,6 +20,7 @@ export class KeysPipe implements PipeTransform {
   styleUrls: ['./ads.component.scss']
 })
 export class AdsComponent implements OnInit {
+  public searchByName: string;
   startDatePlaceHolder = 'Start date';
   endDatePlaceHolder = 'End date';
   datePickerOptions: IMyDpOptions = {
