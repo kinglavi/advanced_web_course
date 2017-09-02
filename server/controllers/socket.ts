@@ -5,7 +5,7 @@ export default (io) => {
   
   io.sockets.on('connect', (socket) => {
 
-    Ad.find({},(err, doc) => {
+    Ad.find({'screens': parseInt(socket.handshake.query['screenid'])},(err, doc) => {
       if (err) { return console.error(err); }
       socket.emit("screen"+socket.handshake.query['screenid'],doc);
     });
