@@ -36,10 +36,10 @@ export class AdsComponent implements OnInit {
     open: false
   };
   startDate: Object = '';
-  endDate: Object;
+  endDate: Object = '';
   ad = {
     name: '',
-    adText: [''],
+    adText: [],
     screens: [],
     imageLink: [],
     templateLink: '',
@@ -52,18 +52,17 @@ export class AdsComponent implements OnInit {
       endTime: ''
     }
   };
-  startTimeHour = 0;
-  startTimeMinute = 0;
-  endTimeHour = 0;
-  endTimeMinute = 0;
+  startTimeHour;
+  startTimeMinute;
+  endTimeHour;
+  endTimeMinute;
+  currentText = '';
 
   ads = [];
-  startTime;
   isLoading = true;
   isEditing = false;
   screenOption: number[];
   imageOption: number[];
-  templateOption: number[];
   dayOption: number[];
   imageOptions: IMultiSelectOption[];
   screenOptions: IMultiSelectOption[];
@@ -72,11 +71,10 @@ export class AdsComponent implements OnInit {
   screenIds = [];
   imageIds: number[];
   days = [];
-  templateIds = [];
   templateOptions = ['Template 1', 'Template 2'];
   addAdForm: FormGroup;
   name = new FormControl('', Validators.required);
-
+  selectedText = '';
   myGroup= new FormGroup({
     firstName: new FormControl()
   });
@@ -105,6 +103,7 @@ export class AdsComponent implements OnInit {
               public toast: ToastComponent) { }
 
   ngOnInit() {
+
     this.screenOptions = [
       { id: 1, name: 'Screen 1' },
       { id: 2, name: 'Screen 2' },
@@ -124,6 +123,7 @@ export class AdsComponent implements OnInit {
       { id: 6, name: 'Friday' },
       { id: 7, name: 'Saturday' }
     ];
+
 
     this.getAds();
     this.addAdForm = this.formBuilder.group({
@@ -149,6 +149,21 @@ export class AdsComponent implements OnInit {
     this.ad.timeFrames.startTime += this.startTimeMinute;
   }
 
+  addTextToArray() {
+    if (this.currentText !== '') {
+      this.ad.adText.push(this.currentText);
+    }
+    this.currentText = '';
+  }
+
+  removeTextFromArray() {
+    const index = this.ad.adText.indexOf(this.selectedText);
+    if (index > -1) {
+      this.ad.adText.splice(index, 1);
+    }
+
+  }
+
   changeEndTime($event) {
     this.ad.timeFrames.endTime = '';
     if (this.endTimeHour < 10) {
@@ -165,7 +180,6 @@ export class AdsComponent implements OnInit {
   }
 
   onStartDateChanged(date: IMyDateModel) {
-
     this.ad.timeFrames.startDate = new Date(date.formatted);
     this.closeSelector();
   }
