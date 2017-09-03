@@ -44,8 +44,8 @@ export class AdsComponent implements OnInit {
   startDate: Object = '';
   endDate: Object = '';
   currentTimeFrame = {
-    startDate: new Date(),
-    endDate: new Date(),
+    startDate: new Date().toLocaleDateString(),
+    endDate: new Date().toLocaleDateString(),
     days: [],
     startTime: '',
     endTime: ''
@@ -78,7 +78,7 @@ export class AdsComponent implements OnInit {
   screenIds = [];
   imageIds: number[];
   days = [];
-  templateOptions = ['Template 1', 'Template 2'];
+  templateOptions = ['Template 1', 'Template 2','Template 3'];
   addAdForm: FormGroup;
   name = new FormControl('', Validators.required);
   selectedText = '';
@@ -115,10 +115,17 @@ export class AdsComponent implements OnInit {
     this.screenOptions = [
       { id: 1, name: 'Screen 1' },
       { id: 2, name: 'Screen 2' },
+      { id: 3, name: 'Screen 3' },
+      { id: 4, name: 'Screen 4' },
+      { id: 5, name: 'Screen 5' },
+      { id: 6, name: 'Screen 6' }
     ];
     this.imageOptions = [
       { id: 1, name: 'Cat image', params: 'https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg' },
       { id: 2, name: 'Dog image', params: 'https://static.pexels.com/photos/356378/pexels-photo-356378.jpeg' },
+      { id: 3, name: 'Rx Vega', params: 'https://images.techhive.com/images/article/2017/02/radeon-rx-vega-logo-100711091-large.jpg' },
+      { id: 4, name: 'ThreadRipper', params: 'https://www.amd.com/system/files/38372-threadripper-gaming-1260x709.jpg' },
+      { id: 5, name: 'Ryzen 7', params: 'https://www.primeabgb.com/wp-content/uploads/2017/02/AMD-RYZEN-7-1700X-3.4-GHz-3.8-GHz-Turbo-Socket-AM4-95W-YD170XBCAEWOF-Desktop-Processor.jpg' },
     ];
 
 
@@ -200,12 +207,13 @@ export class AdsComponent implements OnInit {
   }
 
   onStartDateChanged(date: IMyDateModel) {
-    this.currentTimeFrame.startDate = new Date(date.formatted);
+    this.currentTimeFrame.startDate = new Date(date.formatted).toLocaleDateString();
     this.closeSelector();
   }
 
   onEndDateChanged(date: IMyDateModel) {
-    this.currentTimeFrame.endDate = new Date(date.formatted);
+    console.log(new Date(date.jsdate).toLocaleDateString());
+    this.currentTimeFrame.endDate = new Date(date.jsdate).toLocaleDateString();
     this.closeSelector();
   }
 

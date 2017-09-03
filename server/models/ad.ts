@@ -8,8 +8,8 @@ const adSchema = new mongoose.Schema({
   templateLink: String,
   ttl: Number,
   timeFrames: [{
-    startDate: Date,
-    endDate: Date,
+    startDate: String,
+    endDate: String,
     days: [String],
     startTime: String,
     endTime: String

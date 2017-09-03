@@ -3,32 +3,10 @@ import { Component, Input } from '@angular/core';
 import { TemplateComponent } from './template.component';
  
 @Component({
+  styleUrls:['./Template1.css'],
   template: `
     <div style="background-color: #f5f5f5;width: 100%;height: 100%">
-    <img id="image1"/>
-    <img id="image2"/>
-    <img id="image3"/>
-    <img id="image4"/>
-    <img id="image5"/>
-    <p id="text1"></p>
-    <br>
-    <p id="text2"></p>
-    <br>
-    <p id="text3"></p>
-    <br>
-    <p id="text4"></p>
-    <br>
-    <p id="text5"></p>
-    <br>
-    <p id="text6"></p>
-    <br>
-    <p id="text7"></p>
-    <br>
-    <p id="text8"></p>
-    <br>
-    <p id="text9"></p>
-    <br>
-    <p id="text10"></p>
+    <canvas id="ctx" style="width:100%;"></canvas>
     </div>
 
   `
@@ -37,6 +15,14 @@ export class Template1Component implements TemplateComponent {
   @Input() data: any;
   setData(data){
    this.data = data;
+   let ctx = (<HTMLCanvasElement>document.querySelector("#ctx")).getContext('2d');
+   ctx.font = "40px Comic Sans MS";
+   ctx.fillStyle = "red";
+   ctx.fillText(data.adText[0], 97, 100);
+   ctx.fillStyle = "#000";
+   ctx.fillText(data.adText[0], 100, 100);
+   ctx.fillStyle = "cyan";
+   ctx.fillText(data.adText[0], 103, 100);
  }
  
 }

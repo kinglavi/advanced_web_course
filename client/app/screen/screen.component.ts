@@ -35,9 +35,9 @@ export class ScreenComponent implements OnInit, OnDestroy, AfterViewInit {
     this.weekday[4] = "Thursday";
     this.weekday[5] = "Friday";
     this.weekday[6] = "Saturday";
-    this.templates.set("Template 3",Template1Component);
-    this.templates.set("Template 1",Template2Component);
-    this.templates.set("Template 2",Template3Component);
+    this.templates.set("Template 1",Template1Component);
+    this.templates.set("Template 2",Template2Component);
+    this.templates.set("Template 3",Template3Component);
   }
 
   ngOnInit() {
@@ -111,8 +111,8 @@ export class ScreenComponent implements OnInit, OnDestroy, AfterViewInit {
 
   // check date range
   var currDate = new Date();
-  var startSplit = timeFrame.startDate.split("/");
-  var endSplit = timeFrame.endDate.split("/");
+  var startSplit = timeFrame.startDate.split(".");
+  var endSplit = timeFrame.endDate.split(".");
   var startDate = new Date(startSplit[2],startSplit[1]-1,startSplit[0]);
   var endDate = new Date(endSplit[2],endSplit[1]-1,endSplit[0]);
   
