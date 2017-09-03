@@ -9,7 +9,6 @@ export default class StatsContr {
 
   getStatsByDay = (req, res) => {
     Ad.find({}, (err, ads) => {
-      console.log("Finding");
       if (err)
         console.log(err);
       else {
@@ -21,7 +20,6 @@ export default class StatsContr {
           days.push({adN: 0, dates: []});
 
         ads.forEach(ad => {
-          console.log("Addddd");
           ad.timeFrames.forEach(frame => {
             for (let date = new Date(frame.startDate.slice(3,6) + frame.startDate.slice(0,3) + frame.startDate.slice(6));
                  date <= new Date(frame.endDate.slice(3,6) + frame.endDate.slice(0,3) + frame.endDate.slice(6));
@@ -29,7 +27,7 @@ export default class StatsContr {
               let day = date.getDay() === 0 ? 6 : date.getDay() - 1;
 
               if(frame.days.indexOf(this.DAYS[day])!==-1) {
-                console.log("Index")
+
                 if(days[day].dates.indexOf(date) === - 1)
                   days[day].dates.push(date);
 
@@ -42,7 +40,7 @@ export default class StatsContr {
         days.forEach(day => {
           data.push(Math.round(day.adN / day.dates.length));
         });
-        console.log(data);
+
         res.json({data: data});
       }
     });
@@ -106,7 +104,7 @@ export default class StatsContr {
     }], (err, data) => {
       err
         ? console.log(err)
-        : res.json(data);
+        : res.json({data: Math.round(data[0].data)});
     });
   }
 
