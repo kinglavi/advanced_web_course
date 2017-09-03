@@ -23,8 +23,8 @@ export default class StatsContr {
         ads.forEach(ad => {
           console.log("Addddd");
           ad.timeFrames.forEach(frame => {
-            for (let date = new Date(frame.startDate);
-                 date <= new Date(frame.endDate);
+            for (let date = new Date(frame.startDate.slice(3,6) + frame.startDate.slice(0,3) + frame.startDate.slice(6));
+                 date <= new Date(frame.endDate.slice(3,6) + frame.endDate.slice(0,3) + frame.endDate.slice(6));
                  date.setDate(date.getDate() + 1)) {
               let day = date.getDay() === 0 ? 6 : date.getDay() - 1;
 
@@ -68,8 +68,8 @@ export default class StatsContr {
 
         ads.forEach(ad => {
           ad.timeFrames.forEach(frame => {
-            for (let date = new Date(frame.startDate);
-                 date <= new Date(frame.endDate);
+            for (let date = new Date(frame.startDate.slice(3,6) + frame.startDate.slice(0,3) + frame.startDate.slice(6));
+                 date <= new Date(frame.endDate.slice(3,6) + frame.endDate.slice(0,3) + frame.endDate.slice(6));
                  date.setDate(date.getDate() + 1)) {
 
               let day1 = date.getDay() === 0 ? 6 : date.getDay() - 1;
