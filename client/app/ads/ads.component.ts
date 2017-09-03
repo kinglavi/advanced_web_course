@@ -1,4 +1,4 @@
-import {Component, OnInit, Pipe, PipeTransform} from '@angular/core';
+import {Component, OnInit, Pipe, PipeTransform, ViewChild} from '@angular/core';
 import { Http } from '@angular/http';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
@@ -27,6 +27,7 @@ export class AdsComponent implements OnInit {
   public searchByScreen: string;
   startDatePlaceHolder = 'Start date';
   endDatePlaceHolder = 'End date';
+  context: CanvasRenderingContext2D;
   datePickerOptions: IMyDpOptions = {
     // other options...
     todayBtnTxt: 'Today',
@@ -108,8 +109,9 @@ export class AdsComponent implements OnInit {
               private http: Http,
               public toast: ToastComponent) { }
 
-  ngOnInit() {
+  @ViewChild('myCanvas') myCanvas;
 
+  ngOnInit() {
     this.screenOptions = [
       { id: 1, name: 'Screen 1' },
       { id: 2, name: 'Screen 2' },
@@ -139,6 +141,14 @@ export class AdsComponent implements OnInit {
       ttl: this.ad.ttl
     });
   }
+
+  // ngAfterViewInit() {
+  //   console.log("lalal");
+  //   const canvas = this.myCanvas.nativeElement;
+  //   const ctx = canvas.getContext('myCanvas');
+  //   ctx.font = '30px Arial';
+  //   ctx.fillText('Hello World', 10, 50);
+  // }
 
   addTimeFrame() {
     this.ad.timeFrames.push(this.currentTimeFrame);
