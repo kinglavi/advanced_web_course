@@ -14,6 +14,19 @@ export class FilterPipe implements PipeTransform {
       return items;
     }
 
-    return items.filter(singleItem => singleItem[field].toLowerCase().includes(value.toLowerCase()));
+    const result = [];
+    items.forEach(item => {
+      let lower_item_value = '';
+      if (item[field] !== undefined) {
+        lower_item_value = item[field].toLowerCase();
+      }
+
+      if (lower_item_value.includes(value)) {
+        result.push(item);
+      }
+    });
+    return result;
   }
 }
+
+

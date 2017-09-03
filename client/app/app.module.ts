@@ -28,7 +28,8 @@ import { MyDatePickerModule } from 'mydatepicker';
 
 import {MultiselectDropdownModule} from 'angular-2-dropdown-multiselect';
 import { BrowserModule } from '@angular/platform-browser';
-import {FilterPipe} from './pipes/filter';
+import { FilterPipe } from './pipes/filter';
+import {ArrayFilterPipe} from './pipes/arrayFilter';
 
 
 
@@ -49,7 +50,9 @@ import {FilterPipe} from './pipes/filter';
     Template1Component,
     Template2Component,
     Template3Component,
-    FilterPipe
+    FilterPipe,
+    ArrayFilterPipe
+
   ],
   imports: [
     RoutingModule,

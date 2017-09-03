@@ -21,6 +21,9 @@ export class KeysPipe implements PipeTransform {
 })
 export class AdsComponent implements OnInit {
   public searchByName: string;
+  public searchByText: string;
+  public searchByTemplate: string;
+  public searchByScreen: string;
   startDatePlaceHolder = 'Start date';
   endDatePlaceHolder = 'End date';
   datePickerOptions: IMyDpOptions = {
