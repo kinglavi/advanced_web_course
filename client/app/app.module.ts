@@ -30,6 +30,7 @@ import {MultiselectDropdownModule} from 'angular-2-dropdown-multiselect';
 import { BrowserModule } from '@angular/platform-browser';
 import { FilterPipe } from './pipes/filter';
 import {ArrayFilterPipe} from './pipes/arrayFilter';
+import { DatePipe } from '@angular/common';
 
 
 
@@ -52,7 +53,6 @@ import {ArrayFilterPipe} from './pipes/arrayFilter';
     Template3Component,
     FilterPipe,
     ArrayFilterPipe
-
   ],
   imports: [
     RoutingModule,
@@ -68,7 +68,8 @@ import {ArrayFilterPipe} from './pipes/arrayFilter';
     AuthGuardAdmin,
     AdService,
     UserService,
-    ChartsService
+    ChartsService,
+    DatePipe
   ],
   entryComponents: [ Template1Component, Template2Component, Template3Component ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

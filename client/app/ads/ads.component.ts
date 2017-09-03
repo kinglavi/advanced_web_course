@@ -7,6 +7,7 @@ import { ToastComponent } from '../shared/toast/toast.component';
 import {IMultiSelectOption, IMultiSelectSettings, IMultiSelectTexts} from 'angular-2-dropdown-multiselect';
 import {IMyDateModel, IMyDpOptions, IMySelector} from 'mydatepicker';
 
+
 @Pipe({ name: 'keys',  pure: false })
 export class KeysPipe implements PipeTransform {
   transform(value: any, args: any[] = null): any {
@@ -269,6 +270,7 @@ export class AdsComponent implements OnInit {
 
   enableEditing(ad) {
     this.isEditing = true;
+    console.log(ad);
     this.ad = ad;
   }
 

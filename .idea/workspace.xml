@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9457d928-b207-410b-8bd8-2ccb5b307872" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/pipes/arrayFilter.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/ads/ads.component.html" afterPath="$PROJECT_DIR$/client/app/ads/ads.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/ads/ads.component.ts" afterPath="$PROJECT_DIR$/client/app/ads/ads.component.ts" />
@@ -28,8 +27,8 @@
             <file leaf-file-name="ad.ts" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/server/models/ad.ts">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="300">
-                    <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+                  <state relative-caret-position="180">
+                    <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
                     <folding />
                   </state>
                 </provider>
@@ -45,8 +44,8 @@
       <file leaf-file-name="ads.component.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/ads/ads.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="45" column="40" lean-forward="false" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+            <state relative-caret-position="186">
+              <caret line="77" column="13" lean-forward="true" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
               <folding>
                 <element signature="n#style#0;n#form#0;n#td#0;n#tr#0;n#tbody#2;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -58,8 +57,8 @@
       <file leaf-file-name="filter.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/pipes/filter.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="7" />
+            <state relative-caret-position="180">
+              <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -68,8 +67,8 @@
       <file leaf-file-name="ads.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/ads/ads.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="215" column="28" lean-forward="false" selection-start-line="215" selection-start-column="22" selection-end-line="215" selection-end-column="28" />
+            <state relative-caret-position="115">
+              <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
               <folding>
                 <element signature="e#0#69#0" expanded="true" />
               </folding>
@@ -80,9 +79,11 @@
       <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="31" column="38" lean-forward="false" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-              <folding />
+            <state relative-caret-position="68">
+              <caret line="71" column="12" lean-forward="true" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#65#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -165,8 +166,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>valida</find>
-      <find>date</find>
       <find>weight</find>
       <find>Text</find>
       <find>ngfor</find>
@@ -193,8 +192,10 @@
       <find>add time</find>
       <find>searchStrin</find>
       <find>|</find>
-      <find>foreac</find>
       <find>consol</find>
+      <find>foreac</find>
+      <find>edit</find>
+      <find>startDate</find>
     </findStrings>
     <replaceStrings>
       <replace>currentTimeFrame</replace>
@@ -214,10 +215,10 @@
         <option value="$PROJECT_DIR$/client/app/routing.module.ts" />
         <option value="$PROJECT_DIR$/server/models/ad.ts" />
         <option value="$PROJECT_DIR$/client/app/pipes/filter.pipe" />
-        <option value="$PROJECT_DIR$/client/app/ads/ads.component.ts" />
-        <option value="$PROJECT_DIR$/client/app/pipes/filter.ts" />
-        <option value="$PROJECT_DIR$/client/app/app.module.ts" />
         <option value="$PROJECT_DIR$/client/app/pipes/arrayFilter.ts" />
+        <option value="$PROJECT_DIR$/client/app/ads/ads.component.ts" />
+        <option value="$PROJECT_DIR$/client/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/client/app/pipes/filter.ts" />
         <option value="$PROJECT_DIR$/client/app/ads/ads.component.html" />
       </list>
     </option>
@@ -462,7 +463,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1504120162827</updated>
-      <workItem from="1504120164726" duration="49450000" />
+      <workItem from="1504120164726" duration="53240000" />
     </task>
     <task id="LOCAL-00001" summary="updated ad component">
       <created>1504121028987</created>
@@ -534,11 +535,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504395663847</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="finished filters">
+      <created>1504398671909</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1504398671909</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49450000" />
+    <option name="totallyTimeSpent" value="53240000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1032" y="-8" width="1040" height="744" extended-state="6" />
@@ -582,7 +590,8 @@
     <MESSAGE value="days changed to words" />
     <MESSAGE value="fixed time frames" />
     <MESSAGE value="added name filter" />
-    <option name="LAST_COMMIT_MESSAGE" value="added name filter" />
+    <MESSAGE value="finished filters" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished filters" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -758,40 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/ad.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/ads/ads.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="215" column="28" lean-forward="false" selection-start-line="215" selection-start-column="22" selection-end-line="215" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="31" column="38" lean-forward="false" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/pipes/filter.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/pipes/arrayFilter.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -800,10 +775,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="71" column="12" lean-forward="true" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/pipes/filter.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/ad.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/ads/ads.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/ads/ads.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="45" column="40" lean-forward="false" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+        <state relative-caret-position="186">
+          <caret line="77" column="13" lean-forward="true" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
           <folding>
             <element signature="n#style#0;n#form#0;n#td#0;n#tr#0;n#tbody#2;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
