@@ -31,6 +31,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FilterPipe } from './pipes/filter';
 import {ArrayFilterPipe} from './pipes/arrayFilter';
 import { DatePipe } from '@angular/common';
+import {Ng2SmartTableModule} from 'ng2-smart-table';
 
 
 
